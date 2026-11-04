@@ -44,7 +44,7 @@ Use `unit`, `integration`, and `e2e` pytest markers. Run `.venv/bin/python check
 
 ### Work record
 
-- Issue: add your own issue URL.
+- Issue: [#1 — RPS-001: Play a round](https://github.com/SaroshAboobakker/is218-rock-paper-scissors/issues/1).
 - Pull request / CI: add actual URLs when they exist.
 - Implementation: [game.py](game.py), [tests/test_game.py](tests/test_game.py), and [tests/e2e/test_round.py](tests/e2e/test_round.py).
 - Checks: `.venv/bin/python check.py` passed — Black (11 files unchanged), Pylint, 23 non-browser tests, and 6 Chromium tests. The student confirmed the starter page loaded and showed its unfinished notice before implementation; no manual post-implementation round has been reported yet. Automated browser evidence is in [tests/e2e/test_round.py](tests/e2e/test_round.py).
