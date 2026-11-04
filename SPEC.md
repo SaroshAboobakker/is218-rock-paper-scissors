@@ -27,7 +27,7 @@ Results are from the **player’s perspective**. `determine_winner(player, compu
 
 ### Agreed plan
 
-Before implementation, predict one matchup and explain it with your local coding agent. Discuss a short plan and checks. Once it makes sense, ask the agent to replace this paragraph with the agreed plan, preserving the expected results above. Continue in the same chat.
+Implement the specified one-round behavior in `game.py`. Keep the supplied page and server, reject unsupported or missing moves through the existing request validation, and add the nine unit outcomes, one real request/result check, and a real-browser round with replay. Use deterministic computer choices in request and browser tests, while exercising the actual rule function.
 
 ### Checks
 
@@ -44,7 +44,8 @@ Use `unit`, `integration`, and `e2e` pytest markers. Run `.venv/bin/python check
 
 ### Work record
 
-- Issue: add your own issue URL.
-- Pull request / CI: add actual URLs when they exist.
-- Implementation: **Not implemented.** The shell is supplied; `game.py` is unfinished.
-- Checks: **Rules not verified.** Supplied request/browser tests cover the shell only. After implementation, record actual full-check results and your browser observations here; put detailed results in the PR. Passing formatting and analysis alone is not evidence of correct rules.
+- Issue: [#1 — RPS-001: Play a round](https://github.com/SaroshAboobakker/is218-rock-paper-scissors/issues/1).
+- Pull request: [#2 — RPS-001: Play a round](https://github.com/SaroshAboobakker/is218-rock-paper-scissors/pull/2).
+- CI run: [Python checks — successful](https://github.com/SaroshAboobakker/is218-rock-paper-scissors/actions/runs/41916500262).
+- Implementation: [game.py](game.py), [tests/test_game.py](tests/test_game.py), and [tests/e2e/test_round.py](tests/e2e/test_round.py).
+- Checks: `.venv/bin/python check.py` passed — Black (11 files unchanged), Pylint, 23 non-browser tests, and 6 Chromium tests; the linked GitHub Actions run also passed `check.py`. In the student's manual browser play, rock vs. rock showed a tie, scissors vs. rock showed a computer win, and scissors vs. paper showed a player win. Automated browser evidence is in [tests/e2e/test_round.py](tests/e2e/test_round.py).
