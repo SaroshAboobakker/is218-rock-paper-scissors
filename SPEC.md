@@ -42,10 +42,18 @@ Before coding, agree this small test plan with AI:
 
 Use `unit`, `integration`, and `e2e` pytest markers. Run `.venv/bin/python check.py` for Black, Pylint, fast tests, and browser checks; then review the diff. Keep shared settings and meaningful assertions intact. The student still plays, inspects a rule and its test, and gives feedback. Browser automation does not establish every aspect of usability or application performance.
 
+### Review evidence
+
+- Review example, recorded after implementation: player rock vs. computer paper should return `lose`, because paper covers rock. This documents the prediction and reason, but was not captured before coding.
+- Test explanation: `test_real_round_request_displays_choices_and_result` fixes the computer move to paper and submits rock; its `Computer wins` and `data-outcome="lose"` assertions would catch a reversed player perspective or incorrect result for that matchup.
+- Manual play reported by the student: rock vs. rock showed a tie; scissors vs. rock showed a computer win; scissors vs. paper showed a player win. These results follow the same-move tie and the rules that rock beats scissors and scissors beats paper.
+- Keyboard controls have not yet been manually checked. The supplied move controls are native submit buttons, which should work with Tab and Enter; verify in the running browser before recording this as observed.
+- Help received: AI assisted with implementation, test writing, checks, code review, and GitHub delivery.
+
 ### Work record
 
 - Issue: [#1 — RPS-001: Play a round](https://github.com/SaroshAboobakker/is218-rock-paper-scissors/issues/1).
 - Pull request: [#2 — RPS-001: Play a round](https://github.com/SaroshAboobakker/is218-rock-paper-scissors/pull/2).
-- CI run: [Python checks — successful](https://github.com/SaroshAboobakker/is218-rock-paper-scissors/actions/runs/41916500262).
+- CI run: [Python checks — successful on the final PR commit](https://github.com/SaroshAboobakker/is218-rock-paper-scissors/actions/runs/41916932416).
 - Implementation: [game.py](game.py), [tests/test_game.py](tests/test_game.py), and [tests/e2e/test_round.py](tests/e2e/test_round.py).
-- Checks: `.venv/bin/python check.py` passed — Black (11 files unchanged), Pylint, 23 non-browser tests, and 6 Chromium tests; the linked GitHub Actions run also passed `check.py`. In the student's manual browser play, rock vs. rock showed a tie, scissors vs. rock showed a computer win, and scissors vs. paper showed a player win. Automated browser evidence is in [tests/e2e/test_round.py](tests/e2e/test_round.py).
+- Checks: `.venv/bin/python check.py` passed — Black (11 files unchanged), Pylint, 23 non-browser tests, and 6 Chromium tests; the linked GitHub Actions run passed `check.py` on the final PR commit. The reported manual outcomes and review explanation are recorded above. Automated browser evidence is in [tests/e2e/test_round.py](tests/e2e/test_round.py).
