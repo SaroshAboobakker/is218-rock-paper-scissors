@@ -46,6 +46,6 @@ Use `unit`, `integration`, and `e2e` pytest markers. Run `.venv/bin/python check
 
 - Issue: [#1 — RPS-001: Play a round](https://github.com/SaroshAboobakker/is218-rock-paper-scissors/issues/1).
 - Pull request: [#2 — RPS-001: Play a round](https://github.com/SaroshAboobakker/is218-rock-paper-scissors/pull/2).
-- CI run: [Python checks — successful](https://github.com/SaroshAboobakker/is218-rock-paper-scissors/actions/runs/41916272097).
+- CI run: [Python checks — successful](https://github.com/SaroshAboobakker/is218-rock-paper-scissors/actions/runs/41916500262).
 - Implementation: [game.py](game.py), [tests/test_game.py](tests/test_game.py), and [tests/e2e/test_round.py](tests/e2e/test_round.py).
-- Checks: `.venv/bin/python check.py` passed — Black (11 files unchanged), Pylint, 23 non-browser tests, and 6 Chromium tests; the linked GitHub Actions run also passed `check.py`. The student confirmed playing a post-implementation round, but has not yet shared its moves and displayed result. Automated browser evidence is in [tests/e2e/test_round.py](tests/e2e/test_round.py).
+- Checks: `.venv/bin/python check.py` passed — Black (11 files unchanged), Pylint, 23 non-browser tests, and 6 Chromium tests; the linked GitHub Actions run also passed `check.py`. In the student's manual browser play, rock vs. rock showed a tie, scissors vs. rock showed a computer win, and scissors vs. paper showed a player win. Automated browser evidence is in [tests/e2e/test_round.py](tests/e2e/test_round.py).
